@@ -3,9 +3,20 @@
   "version": "1.0.0",
   "description": "Node Auth 1 - Afternoon",
   "main": "index.js",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3005"
+    },
+    "/auth": {
+      "target": "http://localhost:3005"
+    }
+  },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.15.3",
-    "express-session": "^1.15.3"
+    "express-session": "^1.15.3",
+    "passport": "^0.4.0",
+    "passport-auth0": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
